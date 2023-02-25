@@ -6,3 +6,62 @@ kann jederzeit der Urzustand zurück gesetzt werden. Also falls eine Aufgabe fer
 Hier empfehle ich erstmal ein eigenes Konsolen-Fenster (VIM hat zwar auch eine Konsole, aber dies wäre zu
 früh dafür).
 
+1. Einfache Navigation im Normal-Modus
+
+Zum einen kann man mit den Cursor-Tasten navigieren. Wobei wesentlich effizienter ist es mit hjkl den
+Cursor zu bewegen:
+            k   hoch
+    links  h l  rechts
+            j   runter
+
+Merken kann man sich das so: H und L sind ja links und rechts. J ist ähnlich einem Pfeil nach unten und
+dann bleibt nur k das muss dann ja oben sein.
+
+AUFGABE: Bewege den Cursor zu diesem X <-- (dann drückst Du zz)
+
+2. Relative Zeilennummern
+
+Solltest Du die _vimrc noch nicht kopiert haben, dann zeigt VIM keine Zeilennummern an. Für die Navigation
+sind diese aber zwingend notwendig. Im Idealfall relative Zeilennummern.
+
+Die geben an, wo im Bezug zum Cursor sich die Zeile befindet (z.B. 5 nach oben oder 10 nach unten).
+
+mit :set rnu<enter> können diese aktiviert werden.
+
+AUFGABE: Nun bist du noch beim X von oben, gehe mit 12j (12 runter) zum Y in der Zeile darunter
+HIER HIN --------------------------> Y (und dann zt)
+
+Das ist schonmal die Verwendung eine grundlegenden Eigenschaft von VIM: Wiederholungen
+
+3. Was soll das zz und zt?
+
+Das zz haben wir schon 2 mal verwendet. Was macht das?
+
+Es ist ganz einfach. zz scrollt das Dokument so, das sich der Cursor in der Mitte (Vertikal) befindet.
+Also so, das über und unter dem Cursor (nahezu) gleich viele Zeilen sind.
+
+Es gibt noch:
+
+zt      Scrollen bis Cursor oben (top) ist
+zz      Scrollen bis Cursor in der Mitte ist (zm wäre langsamer einzugeben, daher zz)
+zb      Scrollen bis Cursor unten (bottom) ist
+
+Einfach mal ausprobieren. Der Cursor bleibt weiterhin beim Y von oben.
+
+Es gibt noch die Möglichkeit eine Zeilennummern voranzustellen z.B. 15zz
+Damit wird der Cursor auf Zeile 15 bewegt und so gescrollt, das diese in der Mitte ist.
+Aber Achtung, der Cursor ist dann NICHT mehr beim Y!
+
+AUFGABE: Markiere die Position von Y mit my (zurück kommst Du mit `y (` ist der Backtick!)).
+Dann bewege dich mit 15zz zur Zeile 15 und mit `y zurück. Um alles zu lesen wieder zt.
+
+4. WIEDERHOLUNG
+
+Also Navigieren mit hjkl, vorangestellte Zahl wiederholt die Bewegung entprechend oft
+(15h geht 15 Zeichen nach links).
+
+zt, zb und zz richtet den Text am Cursor entsprechend aus.
+
+Schließe diese Datei und öffne lesson03.
+
+

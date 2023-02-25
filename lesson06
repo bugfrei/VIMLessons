@@ -1,0 +1,31 @@
+Inzwischen hast Du schon genug Kenntnisse um dir mal das CheatSheet in Files/ anzusehen.
+
+Es ist in 3 Teile jeweils mit Vorder- und Rückseite aufgeteilt:
+1. ANFÄNGER
+2. FORTGESCHRITTEN
+3. PROFIS
+
+Dann gibt es noch einen SONSTIGES Teil und Mappings, NeoVim Unterschiede und anderes.
+
+Die kleine "Flagge" neben den Befehlen zeigt an, ob dies auch in
+- Visual Studio Code (Blau)
+- Visual Studio 2022 CE (Lila)
+- Eclipse (Orange)
+
+funktioniert.
+
+Diese Lesson ist eine reine probieren und selber herausfinden Lesson.
+
+
+Versuch mal den Unterschied von i und I herauszufinden.
+Wie kann ich mit einem Tastendruck (Shift Taste gilt nicht ;-) ) etwas am Ende einer Zeile eingeben.
+Wie füge ich eine leere Zeile oberhalb oder unterhalb des Cursors ein?
+Wie lösche ich etwas nach dem Cursor (reines Delete) und wie komme ich direkt in den INSERT Modus?
+Wie mache ich etwas Rückgängig (Undo) und Wiederhole es (Redo)?
+Wie bewege ich den Cursor Wort-Weise?
+Wie bewege ich den Cursor zum Dokumenten Anfang bzw. Ende?
+Wie suche ich ab Cursor Position ein Zeichen (Vorwärts und Rückwärts)?
+und vieles mehr...
+
+Vieles wird dann noch in den kommenden Lessons besprochen und gezeigt. Aber herausfinden ist oft eine
+gute Lernmethode.

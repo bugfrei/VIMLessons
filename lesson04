@@ -1,0 +1,142 @@
+Nun schauen wir uns Text markieren, kopieren, einfügen und löschen an.
+
+Diese sind extrem mächtige Werkzeuge in VIM und nicht mit dem einfachen Copy/Paste vergleichbar!
+
+1. Text markieren
+
+Hier gibt es 2 grundlegende (und viele weitere) Möglichkeiten:
+
+v   markiert den Textbereich exakt (von Cursorposition bis neuer Cursorposition)
+V   markiert den Textbereich Zeilenweise (von Cursor-Zeile bis neuer Cursor-Zeile)
+
+Wichtig: Bei v gilt der Cursor selbst als Markierung. Also v markiert schonmal das aktuelle Zeichen.
+
+AUFGABE: markiere den Text zwischen den 2 Anführungszeichen in der nächsten Zeile
+HIER: "Diesen Text markieren"
+
+Escape entfernt die Markierung.
+
+AUFGABE: markiere die folgenden 10 Zeilen
+Zeile 1
+Zeile 2
+Zeile 3
+Zeile 4
+Zeile 5
+Zeile 6
+Zeile 7
+Zeile 8
+Zeile 9
+Zeile 10
+
+Du bist auf Zeile 1 gegangen, hast V gedrückt und dann 9 mal Cursor runter bzw. j?
+Nun mal schneller, gehe zur Zeile 1 mit :20<enter>, dann V9j
+
+Dieser Modus ist der VISUELL-Modus (daher auch v/V).
+Hier gelten wieder etwas andere Regeln und Möglichkeiten als beim Normal-Modus, da diese sich dann
+auf den markierten Bereich beziehen.
+
+2. Kopieren
+
+Kopieren (in VIM yank genannt) geht mit y.
+
+AUFGABE: Markiere die folgende Zeile und kopiere sie
+DIESE ZEILE DIESE ZEILE DIESE ZEILE DIESE ZEILE
+
+Nach dem kopieren verschwindet die Markierung. Mehr passiert nicht.
+
+Achtung: Du hast den Text NICHT in die Zwischenablage kopiert! Die Windows/Mac Zwischenablage bleibt
+unverändert (was oft ein großer Vorteil ist).
+
+3. Einfügen
+
+Einfügen wird einfach Paste genannt und wird mit p oder P durchgeführt.
+
+p fügt den Text NACH dem Cursor oder bei Zeilenweise kopieren nach der aktuellen Zeile ein (darunter).
+P entsprecht VOR dem Cursor bzw. vor der aktuellen Zeile (darüber)
+
+AUFGABE: Füge die eben kopierte Zeile einmal unter den vvvvvvvvvv und einmal über den ^^^^^^^^^ ein.
+
+----------------------------------------------------------------------------------------------------
+Hier darunter einfügen:    vvvvvvvvvvvv
+----------------------------------------------------------------------------------------------------
+Und hier darüber einfügen: ^^^^^^^^^^^^
+----------------------------------------------------------------------------------------------------
+
+4. Löschen
+
+Löschen heißt Delete und geht mit d. Löschen kopiert gleichzeitig (also Ausschneiden!)
+
+AUFGABE: Lösche die folgende Zeile und füge sie oben nochmal unter den vv und über den ^^ ein.
+LÖSCH DIESE ZEILE - DIESE ZEILE LÖSCHEN
+
+5. Zeichen löschen
+
+Nun wäre es blöd ein Zeichen zu löschen in dem man es markiert und löscht.
+Schneller geht es mit dem x. Einfach Cursor zum Zeichen bewegen, x drücken und das Zeichen ist weg.
+
+AUFGABE: Lösche die Bindestriche in der Zeile darunter
+Lö-sch al-le Bin-de-str-iche
+
+6. Zeilenweise löschen
+
+Das gleiche gilt bei Zeilen. Markieren und löschen ist umständig. Das kann d auch ohne Markierung.
+
+Nun werden manche Befehle wie d durch die Verwendung von Nummern und/oder Bewegungen noch mächtiger.
+Der Syntax ist d[Nr]<Bewegung|d>
+Nr ist optional. Eine Nr bedeutet, das dies dann entsprechend oft ausgeführt wird.
+Die Bewegung oder ein weiteres d ist notwendig.
+
+Wobei Nr zur Bewegung gehört (5j -> 5 runter). Das kennen wir ja schon.
+
+Ein weiteres d (also dd im ganzen) löscht die aktuelle Zeile.
+
+AUFGABE: Lösche die Zeile darunter mit dd
+LÖSCH MICH MIT dd - dd LÖSCHT MICH EINFACH
+
+AUFGABE: Lösche die 5 Zeilen darunter mit 5dd
+LÖSCH DIESE
+UND DIESE
+DIESE AUCH
+NOCH DIESE
+UND ZU LETZT DIESE
+
+Was soll das nun mit der <Bewegung>?
+
+Neben hjkl gibt es noch andere Möglichkeiten den Cursor zu bewegen. Und in Verbindung mit d bedeutet dies, das
+alles gelöscht wird, was sich in dieser Bewegung befindet.
+
+dj löscht z.B. die aktuelle Zeile (weil da der Cursor ist) und die darunter (weil da mit j der Cursor hin geht)
+dk entsprechend die aktuelle Zeile und die darüber.
+
+AUFGABE: Markier mit ma die nächste Zeile, gehe zur Zeile mit >>HIER HIN<< und drück d'a
+DIESE MIT ma MARKIEREN
+DIESE STEHT NUR SO DA
+>>HIER HIN<<
+
+Es wird alles gelöscht von der Cursorposition bis zur markierten Position (a).
+
+7. <Bewegung> wo noch?
+
+Sehr viele Befehle in VIM können Bewegungen angehängt werden.
+Im Visuell Modus ist y kopieren und d löschen.
+Im Normal Modus benötigen diese eine Bewegung bzw. zwei mal drücken ist immer die aktuelle Zeile.
+
+dd  Aktuelle Zeile löschen
+yy  Aktuelle Zeile kopieren
+y5k Aktuelle und 5 Zeilen nach oben kopieren
+
+Es gibt noch andere, aber diese beiden sind die wichtigsten.
+
+8. Zusammenfassung
+
+v/V markiert Text.
+d löscht markierten Text (dd löscht aktuelle Zeile)
+y kopiert markierten Text (yy kopiert aktuelle Zeile)
+
+d und y erlauben Bewegungen. Bewegungen erlauben Nummern (Wiederholungen).
+
+v erlauben auch Bewegungen, aber diese definieren nur das Ende/den Anfang der Markierung was man während
+der Bewegung ja schon sehen kann.
+
+
+

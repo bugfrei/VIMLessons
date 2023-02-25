@@ -1,0 +1,82 @@
+So nun schreiben wir mal etwas.
+
+1. Insert-Modus
+
+Bewege den Cursor auf das geschlossene " in der Zeile daruter.
+HIER: ""
+
+Und dann drückst Du i (für insert).
+Nun kannst Du was schreiben. Esc geht wieder in den Normal Modus.
+
+Nun nochmal, aber wir wollen nicht AUF der Cursor Position etwas eingeben sondern NEBEN.
+
+Bewege den Cursor auf das öffnende " in der Zeile darunter.
+HIER: ""
+
+Und dann drückst Du a (append).
+Nun kannst Du genauso was schreiben. Der Unterschied ist nur, das i auf bzw. vor der aktuellen
+Cursor Position den Einfügemodus aktiviert und a macht die nach der Cursorposition.
+
+2. Zeilenanfang und Zeilenende
+
+Oft muss man an den Anfang einer Zeile oder an das Ende.
+
+Mit 0 kommt man an den Anfang der Zeile.
+Mit $ an das Ende.
+    Ist der Text eingerückt, dann ist 0 schlecht, weil man ja nicht am ersten Zeichen der Zeile ist.
+    Hier ist ^ (entweder ^<space> oder zweimal ^^ drücken) besser. Damit springt man zum ersten Zeichen
+    einer Zeile.
+
+3. Zur einer bestimmten Zeile springen
+
+15zz hatten wir ja schon, spring zu Zeile 15 und richte das Dokument so aus, das der Cursor in der Mitte ist.
+Wie kommt man jetzt aber einfach nur zur Zeile, sagen wir mal 26?
+
+Hier gibt es 3 Möglichkeiten:
+26G
+26gg
+:26<enter>
+
+Ich bevorzuge :26<enter>
+
+AUFGABE: Spring zur Zeile 26 und versuche 0, $ und ^ aus. Markiere die aktuelle Zeile mit mA
+(ja ein großes A). Zurück zur der aktuellen Zeile kommst Du mit 'A
+
+4. Positions-Markierungen
+
+Mit m<Zeichen> markiert man Positionen. Kennen wir von my wo wir die Y-Position markiert haben.
+
+Nun markierten wir Y mit my und die aktuelle Zeile vor eben mit mA???
+Wir sind mit `y zum Y gesprungen mit mit 'A zur aktuellen Zeile?
+
+Was soll das?
+
+Ganz einfach. `<Zeichen> (Backtick) springt zur exakten Position wobei '<Zeichen> nur zur der Zeile springt.
+Und Groß und Kleinbuchstaben haben den Unterschied von lokalen und globalen Markierungen.
+
+AUFGABE: Schließe diese Datei (:wq - Schreiben und beenden), öffne lesson02 und spring
+zum Y mit `y und dann zur aktuellen Zeile mit 'A
+
+Du siehst, er springt nicht nur zur aktuellen Zeile, sondern öffnet auch gleich das passende Dokument!
+
+Das funktioniert auch wunderbar in Visual Studio Code mit der VIM Erweiterung. Hier wird entweder zum
+entsprechenden Tab und Position gesprungen oder das Dokument geöffnet und zur Position gesprungen.
+
+Anders als im echten VIM speichert VSC diese Markierung aber nicht dauerhaft. In VIM kann man von überall
+zu jederzeit zu den Markierungen springen (nur Großbuchstaben).
+
+Die Kleinbuchstaben können je Datei angelegt werden. Du kannst also auch hier eine Position mit my markieren.
+In lesson02 bleibt es dann die Position von den Y und in lesson03 die hier markierte Position.
+
+5. Zusammenfassung
+
+i und a gehen in den Insert-Modus.
+0 zum Zeilenanfang (^ zum ersten Zeichen der Zeile)
+$ zum Zeilenende
+m<Zeichen> markiert eine Position
+
+Zeichen als Kleinbuchstabe lokal und als Großbuchstaben global.
+
+`<Zeichen> springt zur exakt markierten Stelle
+'<Zeichen> springt nur zur markierten Zeile
+

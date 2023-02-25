@@ -1,9 +1,11 @@
 Grundlegendes:
 
-- VIM besitzt 3 Modis
+- VIM besitzt 3 (Haupt-)Modis
     1. Normal Modus (quadratischer Cursor)
     2. Einfüge-Modus (oder auch überschreiben) (Strich-Cursor)
     3. Befehlsmodus (Eingabe von Befehlen unten)
+
+Es gibt noch Visuell, dazu aber später mehr.
 
 - Beenden von VIM über den Befehlsmodus mit dem Befehl :q
     - Erzwingen mit :q! (Änderungen gehen verloren)

@@ -1,0 +1,113 @@
+Kopieren, Löschen wohin???
+Einfügen von wo???
+
+1. Zwischenablage
+
+Kopiere dir mal in Windows/Mac irgendeinen Text in die Zwischenablage (Strg+C).
+Dann kopiere dir irgendeinen Text hier in diesem Dokument in VIM (v und y oder yy für eine Zeile).
+
+Prüfe mal was nun in der Zwischenablage in Windows/Mac ist...
+
+Immer noch der Text von vorhin.
+
+VIM hat seine eigene Zwischenablage, eigentlich 36 Stück plus ein paar Spezielle. Dort heißen sie "Register"
+
+Die Zwischenablage liegt im Register "+"
+
+Zugriff auf die Register bekommt man
+
+Im Normalmodus/Visuellmodus mit "<Registerzeichen>
+Im Einfügemodus mit Strg+R<Registerzeichen>, was aber nur einfügt (nicht kopiert).
+
+Aus der Zwischenablage einfügen kann man also mit "+p oder "+P
+(Register +, vor/nach Cursor einfügen)
+
+AUFGABE: Füge hier mal den Inhalt deiner Windows/Mac Zwischenablage zwischen den --- Zeilen ein:
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+(einfach Cursor setzen, "+p drücken)
+
+Kopieren geht entsprechend mit "+y. 
+AUFGABE: Markiere den Text in " unten und kopieren ihn in die Windows/Mac Zwischenablahe mit "+y
+Dieser Text hier: "kopiere mich"
+
+Prüf ob du diesen Text nun in einen Editor, Word o.ä. mit Strg+V einfügen kannst.
+
+2. Register
+
+Grundsätzlich kannst Du anstelle des + (für System Zwischenablage) auch jeden Buchstaben und Ziffer
+verwenden.
+
+AUFGABE: Kopiere jeweils jede Zeile einzeln in das angegebene Register
+Zeile 1: Kopiere mich in Register a mit "ayy
+Zeile 2: Kopiere mich in Register 5
+Zeile 3: Und ich will in Register o
+
+AUFGABE: Nun füge diese 3 Zeile mit Register a, 5 und o wieder zwischen den --- Zeilen ein:
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+(also "ap"5p"op)
+
+Vorteil von den Registern ist:
+- Du kannst viel mehr kopieren um es später verwenden zu können als nur einen Text
+- Du veränderst nicht die Zwischenablage des Systems (dort könnte z.B. ein Screenshot enthalten sein)
+- Im echten VIM bleiben die Register bestehen. Auch nach dem Neustart des Rechners!
+
+3. Besondere Register
+
+Ein besonderes Register (+ für System-Zwischenablage) kennen wir ja schon. Weiter Register sind:
+
+1...9   Zuletzt gelöschte Texte
+"       Unbenanntes Register (Ziel von einem einfach y, yy, d, dd... oder "<Register> Angabe)
+%       Dateiname
+.       Zuletzt eingegebener Text (von INSERT bis Escape)
+-       Zuletzt gelöscht (wenn weniger als eine Zeile, z.B. mit X)
+_       Schwarzes Loch (nur zum löschen, verändert kein Registerinhalt)
+"       Ausdruck-Register
+
+Super nützlich ist das Ausdruck-Register.
+
+AUFGABE: Setze den Cursor nach auf den : in der nächsten Zeile und gebe "=5+3<enter>p ein
+HIER: 
+
+Damit kann man also rechnen und das Ergebnis einfügen.
+
+4. Register verwenden
+
+Die Verwendung von Registern ist anfängt immer etwas ungewohnt und man muss etwas überlegen bevor man
+es durchführen kann.
+
+Grundsätzlich funktionieren Register mit allen Befehlen, die einfügen, löschen oder kopieren. Hier ein paar
+Beispiele:
+
+"ayy            Aktuelle Zeile kopieren (yy) nach Register a
+Vjjj"by         Aktuelle Zeile markieren (V) und die 3 Zeilen darunter (jjj) und in Register b kopieren
+Vjjj"bp         Aktuelle Zeile und die 3 darunter markieren und dort Register b einfügen (ersetzen)
+"cdd            Aktuelle Zeile löschen (dd) und nach Register c kopieren
+"+p             System Zwischenablage einfügen (p) - Nach Cursor-Position
+"dP             Register d VOR Cursor-Position einfügen
+10"ep           Register e 10 mal nach Cursor-Position einfügen
+
+AUFGABE: Einfach etwas markieren oder Zeilenweise kopieren/löschen und einfügen.
+Gerne auch mehrmaliges einfügen (5p, "a5p)
+
+AUFGABE: Gehe in den INSERT-Modus (i oder a) und füge ein Register deiner Wahl mit Strg+R<Register> ein.
+
+5. Register anzeigen
+
+Im Befehlsmodus kann man mit :reg die Register anzeigen lassen.
+
+6. Zusammenfassung
+
+Wir kennen nun die Register von VIM und die Möglichkeiten des Zugriffs:
+Umbenannt ohne Registerangabe (nur yy, dd, p...)
+Zwischenabklage mit + ("+yy, "+dd, "+p...)
+Normale Reigster mit Buchstaben/Ziffer
+Ausdrucksregister mit =
+
+Im INSERT-Modus mit Strg+R<Register>
+
+Mit :reg werden die Register angezeigt.
+
