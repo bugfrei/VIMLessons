@@ -29,3 +29,20 @@ und vieles mehr...
 
 Vieles wird dann noch in den kommenden Lessons besprochen und gezeigt. Aber herausfinden ist oft eine
 gute Lernmethode.
+
+Und noch ein guter Tipp: Wenn Du beim Arbeiten mit VIM das Gefühl hast, etwas umständlich zu machen
+(oder du braucht gefühlt lange dafür), dann gibt es sicher eine Möglichkeit dies einfacher durchzuführen.
+
+hjkl (oder Cursortasten, aber bitte abgewöhnen) sollten nur für kurze Bewegungen verwendet werden.
+Man kann jede Stelle des Dokuments mit extrem wenigen Tasten erreichen. Ob mit Nr-Angaben bzw.
+Wiederholungen (10j) oder s
+Arbeit zu vereinfachen.
+
+Oft sind manche Befehle wie C nur Mappings mehrerer Befehle in Folge, die auf C gelegt wurden.
+Bei C ist es: Da
+Probiere es mal aus, einmal C einmal Da... Es macht das gleiche.
+
+Und Mappings bieten auch die Möglichkeit dauerhaft eigene "Befehle" zu erstellen, die komplexe
+Tätigkeiten durchführen. In Verbindung mit Makros, Skripten und Addons kann VIM schnell mächtiger als
+Visual Studio Code werden. Es ist halt nur viel Arbeit dies zu erreichen ;-)
+
