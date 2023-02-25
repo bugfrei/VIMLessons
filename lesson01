@@ -1,0 +1,55 @@
+Grundlegendes:
+
+- VIM besitzt 3 Modis
+    1. Normal Modus (quadratischer Cursor)
+    2. Einfüge-Modus (oder auch überschreiben) (Strich-Cursor)
+    3. Befehlsmodus (Eingabe von Befehlen unten)
+
+- Beenden von VIM über den Befehlsmodus mit dem Befehl :q
+    - Erzwingen mit :q! (Änderungen gehen verloren)
+    - Schreiben mit :w
+    - Schreiben und beenden mit :wq
+
+- VIM startet immer im Normal Modus
+
+- In den Normal Modus gelangt man IMMER mit Escape (auch wenn man bereits im Normal Modus ist)
+
+- Von Grund auf hat VIM keine eigene Konfiguration diese befindet sich entweder in
+    ~/_vimrc            oder in
+    ~/.vimrc
+    (Wobei ~/ immer den User-Root Ordner repräsentiert; in Bash, Mac pwsh und PowerShell)
+
+    (m)eine Beispiel Konfiguration(en) befindet sich im Ordner Files (wobei hier Pfadangaben entsprechend
+    angepasst werden müssen). Die Konfigurationsdatei ist von meinem Mac.
+
+    Um die Versteckten Dateien zu sehen (beginnen mit .) muss in der PowerShell
+    dir -Hidden
+    eingegeben werden. Kopieren, öffnen (vim .vimrc) funktioniert ohne Parameter.
+
+    Die .vimrccode ist die Konfigurationsdatei für die VIM Erweiterung von Visual Studio Code. Sie
+    ist nahezu identisch mit der vimrc, hat aber die eine oder andere Abweichung da die Erweiterung
+    nicht 100% alles von VIM unterstützt.
+
+    Um alle Dateien zu kopieren einfach
+    copy * ~ -Force
+    in der PowerShell eingeben (alles, nach User Root, auch versteckte)
+
+- Dateien können mit VIM zum einen als Parameter geöffnet werden
+    vim datei.txt
+    vim *.txt
+    vim *
+    vim .   (Aktueller Ordner; es wird eine Art Dateimanager geöffnet)
+
+    Zum anderen auch in VIM selber mit dem Befehl :e
+    :e datei.txt
+    :e .   (Aktueller Ordner; es wird eine Art Dateimanager geöffnet)
+    :e.    (geht auch)
+
+    Es gibt in VIM noch mehr Möglichkeiten ein oder mehrere Dateien oder Sessions zu öffnen. In Tabs, Fenstern
+    oder nur Buffers. Aber das normale öffnen sollte erstmal reichen.
+
+- VIM verfügt über Parameter die den Editor in z.B. Diff-Modus (-d) öffnen. Einfach mal lesson01 und lesson01_diff
+  mit vim öffnen (-d Parameter nicht vergessen). In der lesson01_diff steht wie es gehen würde.
+
+Nun einfach mal mit dem öffnen, schließen und beenden etwas herumspielen. Dann gehts zur lesson02.
+

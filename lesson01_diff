@@ -1,0 +1,58 @@
+Grundlegendes:
+
+- VIM besitzt 3 Modis
+    1. Normal Modus (quadratischer Cursor)
+    2. Einfüge-Modus (oder auch überschreiben) (Strich-Cursor)
+    3. Befehlsmodus (Eingabe von Befehlen unten)
+
+- Beenden von VIM über den Befehlsmodus mit dem Befehl :q
+    - Erzwingen mit :q! (Änderungen gehen verloren)
+    - Schreiben mit :w
+    - Schreiben und beenden mit :wq
+
+- hier gibt es ein paar Veränderungen zur lesson01 Datei
+
+- In den Normal Modus gelangt man IMMER mit Escape (auch wenn man bereits im Normal Modus ist)
+
+- Von Grund auf hat VIM keine eigene Konfiguration diese befindet sich entweder in
+    ~/_vimrc            oder in
+    ~/.vimrc
+    (Wobei ~/ immer den User-Root Ordner repräsentiert; in Bash, Mac pwsh und PowerShell)
+
+    Die .vimrccode ist die Konfigurationsdatei für die VIM Erweiterung von Visual Studio Code. Sie
+    ist nahezu identisch mit der vimrc, hat aber die eine oder andere Abweichung da die Erweiterung
+    nicht 100% alles von VIM unterstützt.
+
+Was gelöscht und was hinzugefügt...
+
+    Um alle Dateien zu kopieren einfach
+    copy * ~ -Force
+    in der PowerShell eingeben (alles, nach User Root, auch versteckte)
+
+- Dateien können mit VIM zum einen als Parameter geöffnet werden
+    vim datei.txt
+    vim *.txt
+    vim *
+    vim .   (Aktueller Ordner; es wird eine Art Dateimanager geöffnet)
+
+    Zum anderen auch in VIM selber mit dem Befehl :e
+    :e datei.txt
+    :e .   (Aktueller Ordner; es wird eine Art Dateimanager geöffnet)
+    :e.    (geht auch)
+
+    Es gibt in VIM noch mehr Möglichkeiten ein oder mehrere Dateien oder Sessions zu öffnen. In Tabs, Fenstern
+    oder nur Buffers. Aber das normale öffnen sollte erstmal reichen.
+
+---
+Hier kommt nur noch neuer Text:
+
+Möglichkeiten beide Dateien im Diff-Modus zu öffnen:
+
+vim lesson01 lesson01_diff -d
+vim lesson01* -d
+vim l*01* -d
+vim *01* -d
+
+Alle Dateien auf einmal beendent mit :qa (Erzwingen mit :qa!)   -> Quit All
+Alle Dateien auf einmal schreiben mit :wa                       -> Write All
+Und gleich beenden mit :wqa                                     -> Write Quit All

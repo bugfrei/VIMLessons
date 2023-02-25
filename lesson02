@@ -1,0 +1,8 @@
+Ab dieser Lesson wird git wichtiger. Mit
+
+git restore .
+
+kann jederzeit der Urzustand zurück gesetzt werden. Also falls eine Aufgabe fertig ist oder vermurkst wurde.
+Hier empfehle ich erstmal ein eigenes Konsolen-Fenster (VIM hat zwar auch eine Konsole, aber dies wäre zu
+früh dafür).
+
